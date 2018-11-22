@@ -29,7 +29,7 @@ Game.prototype._init = function () {
 
   self.gameElement = buildDom(`
     <main class="game container">
-    <audio src="musicon.mp3" loop="true" autoplay = "true"></audio>
+    <audio src="music.mp3" loop="true" autoplay = "true"></audio>
     <div class="border-container">
       <header class="game__header text-style">
       <div class="score text-style">
@@ -153,15 +153,14 @@ Game.prototype._checkAllCollision = function() {
 
   self.beers.forEach(function(item){
       if(self.player.checkCollision(item)) {
-        console.log(self.bgColor);
         self.currentIdx += self.offsetIdx;
         if (self.currentIdx === bgColors.length - 1 || self.currentIdx === 0) {
           self.offsetIdx *= -1;
         }
         
         self.bgColor = bgColors[self.currentIdx];
-        console.log(self.bgColor);
 
+        
         if(item.state === 'beer'){
           self.player.invertDirection();
           var newPosition = self._getRandomPositions();
