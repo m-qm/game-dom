@@ -26,7 +26,7 @@ Backlog
 - History of scores by player
 - Design
 - Images
-- Music
+- 
 - Mobile version
 
 Data structure

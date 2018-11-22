@@ -93,6 +93,7 @@ function main() {
   function buildGameover(score) {
 
     // call saveScore(score) and save the result 
+    
     var data = saveScore(score);
 
     gameoverElement = buildDom(`
@@ -161,7 +162,7 @@ function main() {
     // setItem("ranking") to localStorage with the array
     localStorage.setItem("ranking", ranking);
 
-      return JSON.parse(ranking);
+      return JSON.parse(ranking).slice(0, 10);
     }
     // return the array;
     function buildRanking (sortedPlayers) {
