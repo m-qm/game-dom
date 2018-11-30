@@ -8,6 +8,7 @@
       background-position: center center;
       padding: 0;
       margin: 03;
+      
 
     }
     
@@ -40,5 +41,8 @@
 
     .game {
       margin: 0 auto;
+    }
+    .splash-container {
+      width: 100%;
     }
 
